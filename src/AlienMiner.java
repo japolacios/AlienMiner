@@ -8,8 +8,8 @@ public class AlienMiner extends PApplet {
 	public void settings() {
 
 		// Set Size
-		int alto = 600;
-		int ancho = 1000;
+		int alto = 700;
+		int ancho = 1200;
 
 		size(ancho, alto);
 
@@ -33,6 +33,7 @@ public class AlienMiner extends PApplet {
 	public void draw() {
 		// Set Background White
 		background(255, 255, 255);
+		logica.paint();
 
 	}
 
@@ -61,7 +62,7 @@ public class AlienMiner extends PApplet {
 
 	@Override
 	public void mouseClicked() {
-
+		logica.click();
 	}
 	// End Class
 }
