@@ -21,6 +21,7 @@ public class EnemyFive extends Enemy {
 	
 	public void setSpeed(){
 		speed = 2;
+		power = 1;
 	}
 	
 	

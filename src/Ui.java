@@ -9,6 +9,8 @@ public class Ui {
 	
 	private PImage scene1,gameOn, manual, bg;
 	private int scene;
+	private int ancho = 0;
+	private int health = 100;
 	
 	Ui(PApplet _app){
 		app = _app;
@@ -29,8 +31,25 @@ public class Ui {
 		app.image(gameOn, 780, 0);
 		app.textSize(20);
 		app.text("HEALTH", 950, 300);
+		paintHealth();
+		app.noFill();
+		app.stroke(0,255,0);
+		app.strokeWeight(4);
+		app.rect(900, 350, 225, 20);
+		
 	}
 	
+		public void paintHealth(){
+			
+			float floatTemp = (health/100f) * 225f;
+			
+			System.out.println(floatTemp);
+			ancho =  (int) floatTemp;
+			
+			app.fill(0,255,0);
+			app.noStroke();
+			app.rect(900, 350, ancho, 20);
+		}
 	public void paintScene1(){
 		app.image(bg, 0, 0);
 		app.image(scene1, 25, 450);
@@ -50,5 +69,9 @@ public class Ui {
 	
 	public void changeScene(int _scene){
 		scene = _scene;
+	}
+	
+	public void setUIHealth(int _h){
+		health = _h;
 	}
 }

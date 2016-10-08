@@ -6,7 +6,7 @@ public class Player {
 	private PApplet app;
 	private int x, y, dir, speed;
 	private PShape shape;
-	
+	private int health = 100;
 
 	private int rotateInt = 0;
 
@@ -14,7 +14,7 @@ public class Player {
 		app = _app;
 		x = _x;
 		y = _y;
-		speed = 5;
+		speed = 7;
 		getShape();
 	}
 
@@ -115,5 +115,17 @@ public class Player {
 	}
 	public int getY(){
 		return y;
+	}
+	
+	public int getHealth(){
+		return health;
+	}
+	
+	public void imHit(int _h){
+		health = health - _h;
+	}
+	
+	public void giveHealth(){
+		health = health + 10;
 	}
 }

@@ -10,7 +10,7 @@ public abstract class Enemy {
 	protected int x;
 	protected int y;
 	private int dir;
-	private int power;
+	protected int power;
 	private int baseX;
 	private int baseY;
 	PApplet app;
@@ -164,6 +164,14 @@ public abstract class Enemy {
 	public int getDamage() {
 
 		return power;
+	}
+	
+	public int getBaseX(){
+		return baseX;
+	}
+	
+	public int getBaseY(){
+		return baseY;
 	}
 
 	// End Clase Abstracta Enemy

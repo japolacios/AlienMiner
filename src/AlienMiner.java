@@ -64,5 +64,18 @@ public class AlienMiner extends PApplet {
 	public void mouseClicked() {
 		logica.click();
 	}
+	
+	public void keyPressed() {
+		switch (key) {
+		case '1':
+			logica.orderElements();
+			break;
+		case '2':
+			logica.flush();
+			break;
+		default:
+			break;
+		}
+	}
 	// End Class
 }
